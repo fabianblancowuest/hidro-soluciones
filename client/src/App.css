@@ -1,3 +1,22 @@
 .appContainer {
 	min-height: 100vh;
 }
+
+.titulo {
+	margin-bottom: 10px;
+}
+
+.contenedor-subtitulo {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.subtitulo {
+	display: inline;
+	width: fit-content;
+}
+
+.img-subtitulo {
+	width: 70px;
+}

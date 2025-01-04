@@ -3,7 +3,7 @@ import "./index.css"; // Asegúrate de que el archivo CSS esté importado
 
 function CrearPiscina() {
 	const [nombre, setNombre] = useState("");
-	const [estado, setEstado] = useState("limpia"); // Inicializamos el estado como "limpia"
+	const [estado, setEstado] = useState("Limpia"); // Inicializamos el estado como "limpia"
 	const [ultimaLimpieza, setUltimaLimpieza] = useState(new Date());
 	const [piscinas, setPiscinas] = useState([]);
 
@@ -43,7 +43,7 @@ function CrearPiscina() {
 				const nuevaPiscina = await respuesta.json();
 				alert("Piscina creada exitosamente:", nuevaPiscina.nombre);
 				setNombre("");
-				setEstado("limpia"); // Restablecemos el estado a "limpia"
+				setEstado("Limpia"); // Restablecemos el estado a "limpia"
 
 				// Obtener las piscinas nuevamente después de crear una nueva
 				obtenerPiscinas();
@@ -77,8 +77,8 @@ function CrearPiscina() {
 						onChange={(e) => setEstado(e.target.value)}
 						required
 					>
-						<option value="limpia">Limpia</option>
-						<option value="sucia">Sucia</option>
+						<option value="Limpia">Limpia</option>
+						<option value="Sucia">Sucia</option>
 					</select>
 				</div>
 				<div>
@@ -101,12 +101,14 @@ function CrearPiscina() {
 						<div
 							key={piscina.id}
 							className={
-								piscina.estado === "limpia" ? "piscina-limpia" : "piscina-sucia"
+								piscina.estado === "Limpia" ? "piscina-limpia" : "piscina-sucia"
 							}
 						>
-							<div>Nombre: {piscina.nombre}</div>
-							<div>Estado: {piscina.estado}</div>
-							<div>Ultima Limpieza: {piscina.ultimaLimpieza}</div>
+							<ul>
+								<li>Nombre: {piscina.nombre}</li>
+								<li>Estado: {piscina.estado}</li>
+								<li>Ultima Limpieza: {piscina.ultima_limpieza}</li>
+							</ul>
 						</div>
 					))}
 				</>

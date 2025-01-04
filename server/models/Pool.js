@@ -7,8 +7,8 @@ const Pool = sequelize.define("Pool", {
 		allowNull: false,
 	},
 	estado: {
-		type: DataTypes.ENUM("limpia", "sucia", "en proceso"),
-		defaultValue: "limpia",
+		type: DataTypes.ENUM("Limpia", "Sucia", "En proceso"),
+		defaultValue: "Limpia",
 	},
 	frecuencia_limpieza: {
 		type: DataTypes.INTEGER, // Días entre limpieza

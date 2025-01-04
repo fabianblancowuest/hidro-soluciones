@@ -24,8 +24,7 @@ h6 {
 	font-weight: bold;
 }
 
-h1,
-h2 {
+h1 {
 	text-align: center;
 	margin: 0.8em auto;
 }
@@ -140,6 +139,8 @@ footer a {
 .agregar-piscina div {
 	max-width: 1400px;
 	margin: 1em auto;
+	padding: 0.5em;
+	border-radius: 10px;
 }
 
 .agregar-piscina > * {
